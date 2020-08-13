@@ -128,6 +128,7 @@ class Issue(BasePage):
 
         self.get_element(IssueLocators.issue_type_field).click()
         issue_dropdown_elements = self.get_elements(IssueLocators.issue_type_dropdown_elements)
+        time.sleep(2)
         if issue_dropdown_elements:
             filtered_issue_elements = list(filter(__filer_epic, issue_dropdown_elements))
             rnd_issue_type_el = random.choice(filtered_issue_elements)
